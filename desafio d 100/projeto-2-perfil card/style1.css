@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: all .3s ease-out;
+}
+body{
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: radial-gradient(circle at bottom, #fff, transparent 80%);
+    linear-gradient(to top, dodgerblue 0%, transparent 70%),    
+    linear-gradient(to bottom, transparent, rgba(#fff 0.4) 70%),
+    #1e90ff;  
+    animation: bg 20s infinite;
+    overflow: hidden;
+}
+@keyframes bg { /*alteração de cores no fundo da tela*/
+    0%, 100% { background-color: #bf3688; }
+    25% { background-color: #e47cfc; }
+    50% { background-color: #563064; }
+    75% { background-color: #b2746f; }
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container::before{
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    content: "\f7e4";
+    font-weight: 900;
+    font-size: 50vh;
+    opacity: 0;
+    top: 30vh;
+    left: 60vw;
+    width: 30vw;
+}
+
+.card{
+    display: flex;
+    justify-content: end;
+    width: 533px;
+    color: rgba(188, 42, 141, 0.66);
+    text-align: center;
+    padding: 45px;
+    border-radius: 14px;
+    backdrop-filter: blur(7.3px);
+    box-shadow: 0 4px 30px #f9f3f9;
+    -webkit-backdrop-filter: blur(7.3px);
+    z-index: 1;
+}
+card-body{
+    width: 70%;
+}
+h5{
+    opacity: .8;
+    color: #da0aa9c9;
+    font-size: 45px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+.socialbar {
+    border-radius: 3em;
+    width: 90%;
+    padding: 17px;
+    margin-top: 17px;
+    color: #fff;
+}
+
+.card a {
+    transition: 0.4s;
+    color: #bf1a6f94;
+}
+svg{ /*aqui mudao tamanho dos icons*/
+    width: 40px;
+    height: 40px;
+}
+
+#rede1:hover{
+    color: #00acee ;
+}
+#rede2:hover{
+    color: rgb(13, 8, 8) ;
+}
+#rede3:hover{
+    color: #bc2a8d;
+}
+#rede4:hover{
+    color: #071a21 ;
+}
+.card-img{
+    position: absolute;
+    width: 380px;
+    top: -60px;
+    right: 250px;
+    box-shadow: 2px 15px 15px #fff;
+    z-index: 1;
+    border-radius: 550px;
+    left: -30%;
+}
+.slowfloat {
+    animation: SlowFloat 1s infinite alternate;
+}
+@keyframes slowfloat {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-10px);}
+}
