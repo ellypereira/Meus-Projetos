@@ -1,0 +1,34 @@
+body, html {
+    
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1{text-align: center;
+color: #fff;}
+
+p{
+    text-align: center;
+    font-size: 2em;}
+
+#btn {
+    text-align: center;
+}
+
+#somar, #subtrair{
+    color: #fff;
+    background-color: #e3676d82;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #e1a2dc;
+    z-index: -1;
+    pointer-events: none;
+}
