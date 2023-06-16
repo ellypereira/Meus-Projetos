@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Slackside+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
 
 * {
     padding: 0;
@@ -9,8 +11,9 @@
 }
 
 body{
-    max-width: 1490px;
+    max-width: 1200px;
     margin: 0 auto;
+    background-color: #ffffff;
 }
 
 header{
@@ -104,6 +107,144 @@ header .navegacao-primaria{
 
     to{
         opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* seção principal SOBRE MIM */
+
+main {
+    background-color: #e6d3d3cd;
+    color: #e47c54;
+}
+
+main .sobre{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.sobre__titulo{
+    margin: 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+    color: rgb(42, 2, 2);
+}
+
+.sobre__titulo h1 {
+    font-size: 2.5rem;
+    color: #e47c54;
+    margin-bottom: 15px;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.sobre__titulo p {
+    color: #090707;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.sobre__titulo div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.sobre__titulo span {
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #340410;
+}
+
+.sobre img {
+    animation: ladoSecao .5s ease-in-out forwards;
+    cursor: pointer;
+    grid-row: 2;
+    max-width: 100%;
+    border-radius: 20px;
+    filter: blur(0);
+}
+
+.sobre img:hover {
+    transition: .5s ease-in;
+    filter: blur(1px);
+}
+
+.sobre__conteudo {
+    animation:  sobreSecao .6s ease-in-out forwards;
+    grid-column: 2/-1;
+    display: grid;
+    color: #340410;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sobre__texto{
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sobre__texto h1 {
+    font-size: 2.3rem;
+    color: #040403;
+    grid-column: 1/-1;
+}
+
+.sobre__texto h1{
+    font-size: 2.3rem;
+    color: rgb(8, 8, 12);
+    grid-column: 1/-1;
+}
+
+.sobre__texto p {
+    font-size: 1.3rem;
+    grid-row: 2;
+    grid-column: 1/-1;
+}
+
+.sobre__info {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/-1;
+    gap: 15px;
+}
+
+.sobre__info i {
+    color: #d4b4c4;
+    display: inline-block;
+    padding-right: 15px;
+    font-size: 1.5rem;
+}
+
+.sobre__info p {
+    font-size: .9rem;
+}
+
+@keyframes sobreSecao{
+    from {
+        transition: .5s;
+        transform: translate3d(60px, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes ladoSecao{
+    from {
+        transition: .5s;
+        transform: translate3d(-60px, 0, 0);
+    }
+
+    to {
         transform: translate3d(0, 0, 0);
     }
 }
