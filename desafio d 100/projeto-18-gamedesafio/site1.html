@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Bem-vindo à Roleta da Zoeira!</h2>
+     <img id="animalGif" src="animalGif.gif" alt="gif de um cat happy">
+
+    <div id="roleta">
+        <div id="seta"></div>
+        <p id="desafio">Gire a roleta para um desafio!</p>
+    </div>
+
+    <button onclick="girarRoleta()">Girar</button>
+
+
+    
+    <script>
+        function girarRoleta() {
+            var desafios = [
+                "Conte uma piada engraçada.",
+                "Imite um animal.",
+                "Dance como ninguém está assistindo.",
+                "Invente uma história absurda.",
+                "Faça uma careta engraçada."
+            ];
+
+            var seta = document.getElementById('seta');
+            var desafioTexto = document.getElementById('desafio');
+
+            // Limpar a transição antes de girar novamente
+            seta.style.transition = 'none';
+            desafioTexto.style.opacity = '0'; // Oculta o texto antes da transição
+
+            var graus = Math.floor(Math.random() * 360) + 3600;
+
+            // Forçar o navegador a recarregar o estilo antes de aplicar a transição novamente
+            void seta.offsetWidth;
+            void desafioTexto.offsetWidth;
+
+            // Adicionar a transição de volta
+            seta.style.transition = 'transform 3s cubic-bezier(0.4, 2.8, 0.65, 0.9)';
+            desafioTexto.style.transition = 'opacity 0.5s ease-in-out';
+
+            seta.style.transform = 'translate(-50%, -50%) rotate(' + graus + 'deg)';
+
+            setTimeout(function() {
+                desafioTexto.innerText = "Desafio: " + desafios[Math.floor(Math.random() * desafios.length)];
+                desafioTexto.style.opacity = '1'; // Torna o texto visível após a transição
+            }, 3000);
+        }
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #aa6581;
+    margin: 0;
+    padding: 0;
+}
+
+#roleta {
+    width: 60vmin; /* Utilizando unidades de viewport para tornar responsivo */
+    height: 60vmin;
+    background-color: #503850;
+    border-radius: 50%;
+    position: relative;
+    margin: 10vmin auto;
+}
+
+#seta {
+    width: 5vmin;
+            height: 5vmin;
+            border-left: 1vmin solid transparent;
+            border-right: 1vmin solid transparent;
+            border-bottom: 2vmin solid #2a1e1e;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            transform-origin: 50% 100%;
+            transition: transform 3s cubic-bezier(0.4, 2.8, 0.65, 0.9);
+            cursor: pointer;
+}
+
+#animalGif {
+    width: 30vmin; /* Ajuste conforme necessário */
+    height: 30vmin;
+    position: absolute;
+    top: 5vmin;
+    right: 5vmin;
+}
+
+#desafio {
+    position: absolute;
+    bottom: 5vmin;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4vmin; /* Ajuste conforme necessário */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+button {
+    font-size: 4vmin; /* Ajuste conforme necessário */
+    padding: 1vmin 2vmin;
+    margin-top: 5vmin;
+}
+
+  /* Media query para ajustar o layout em dispositivos menores, como celulares */
+  @media screen and (max-width: 600px) {
+    #roleta {
+        width: 80vmin;
+        height: 80vmin;
+    }
+    #seta {
+        width: 8vmin;
+        height: 8vmin;
+        border-bottom: 16vmin solid red;
+    }
+
+    #animalGif {
+        width: 50vmin;
+        height: 50vmin;
+        top: 10vmin;
+        right: 10vmin;
+    }
+
+    #desafio {
+        font-size: 6vmin;
+        bottom: 8vmin;
+    }
+
+    button {
+        font-size: 6vmin;
+        padding: 2vmin 4vmin;
+        margin-top: 10vmin;
+    }
+}
