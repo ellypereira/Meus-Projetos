@@ -1,0 +1,26 @@
+body{
+    background-color: #d399c9;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#puzzle-image{
+    margin-bottom: 20px;
+}
+
+#word-display{
+    margin-bottom: 10px;
+}
+
+#guess-input{
+    margin-bottom: 10px;
+}
+
+#feedback{
+    margin-top: 10px;
+    font-weight: bold;
+}
