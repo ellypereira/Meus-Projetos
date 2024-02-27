@@ -6,6 +6,11 @@
     background-color: #c210d61b;
     font-family: 'Concert One', sans-serif;
     font-size: 14px;
+    background-image: url(comhiclipartfelpr.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
 }
 
 .relogio{
