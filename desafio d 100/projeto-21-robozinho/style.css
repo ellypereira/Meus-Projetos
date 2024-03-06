@@ -1,0 +1,77 @@
+#bot-container {
+    position: fixed;
+    top: 44%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#bot-msg {
+    text-align: center;
+    background-color: rgb(15, 195, 204);
+}
+
+#bot-gif {
+    margin-bottom: 20px;
+}
+
+#bot-gif {
+    width: 100px;
+    height: auto;
+}
+
+#user-input {
+    margin-top: 570px;
+}
+
+#user-text {
+    width: calc(100% - 70px);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*Media query para telas menores que 600px (exemplo: smartphones em modo retrato) */
+@media only screen and (max-width: 600px) {
+    #bot-container {
+        max-width: 95%; /* Reduz a largura máxima do contêiner */
+    }
+
+    #bot-gif img {
+        width: 100px; /* Reduz o tamanho do gif do robô */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
