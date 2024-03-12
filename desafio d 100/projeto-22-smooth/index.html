@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem transição</title>
+    <style>
+        body {
+            background-color: rgb(179, 156, 202);
+        }
+        .img-container {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .img-container > img {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(1);
+            transition: scale 750ms ease-out, filter 250ms ease-in-out;
+        }
+
+        .img-container:hover > img {
+            scale: 1.15;
+            filter: grayscale(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="img-container">
+        <img src="tristana.png" alt="tristana artilheira yordle">
+    </div>
+</body>
+</html>
