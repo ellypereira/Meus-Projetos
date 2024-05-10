@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1><span>Dev</span> Sad</h1>
+        <nav>
+            <ul class="navegacao-primaria">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about"></a>About</li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#pricing"></a>Pricing</li>
+                <li><a href="#contact"></a>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <section aria-label="seção currículo dowload Grazzielly" class="section-div">
+        <div>
+            <h2>Hi, I'm Grazzi</h2>
+            <h2 class="digitando">Web Developer Design</h2>
+            <p>Hello, I'm Grazi!
+                Brief summary about myself, I'm currently taking online courses in the field of computing, I really like programming, and...
+                 In the future I'm thinking of working both in design and games s2</p>
+             <a href="#">Download CV</a>
+        </div>
+        <img src="Manga Stickers for Sale.jpg" alt="animeicon">
+
+    </section>
+
+    <main>
+        <article aria-label="seção sobre mim" class="sobre">
+            <div class="sobre__titulo">
+
+            <h1>About Me</h1>
+            <p>Professional Profile - There is All About Me</p>
+            <div aria-label="seção apenas de ilustrações de botões">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <img src="Manga Stickers for Sale.jpg" alt="anime icon">
+        <div class="sobre__conteudo">
+            <div class="sobre__texto">
+                <h1>I'm Dev Sad - Grazzielly</h1>
+                <p>Recounting my time here, I was born in Bahia and when I turned 8/9 I<br>
+                     moved to ES, soon after it was an endless change, between these years<br>
+                     I became interested in games and soon became fascinated with how they were made, and I started to delving into technologies, watching videos about games, and soon after I started taking a course on YouTube. <br>
+                     And now I'm here just doing projects to deepen myself even more in the area of ​​games and also on the web.</p>
+            </div>
+            <div class="sobre__info">
+                <p><i class="fa-solid fa-calendar-days"></i>27/12/2000</p>
+                <p><i class="fa-solid fa-location-dot"></i>São Paulo - Brasil</p>
+                <p><i class="fa-brands fa-whatsapp"></i>+55 11 959645359</p>
+                <p><i class="fa-solid fa-envelope"></i>grazzisouza688@gmail.com</p>
+            </div>
+        </div>
+        </article>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
