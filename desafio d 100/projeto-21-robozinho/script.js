@@ -12,12 +12,12 @@ function sendMessage() {
     } else if (userInput.toLowerCase().includes('boa noite')) {
         botMsg.innerHTML = 'Olá! Boa noite!';
     } else if (userInput.toLowerCase().includes('poema')) {
-        var poems = [
+        var poemas = [
             "O amor é fogo que arde sem se ver...",
             "Viver não é necessário; o que é necessário é criar.",
             "Tenho em mim todos os sonhos do mundo."
         ];
-        var randomPoem = poems[Math.floor(Math.random() * poems.length)];
+        var randomPoem = poemas[Math.floor(Math.random() * poemas.length)];
         botMsg.innerHTML = 'Aqui está um poema famoso para você: <br>' + randomPoem;
     } else {
         botMsg.innerHTML = 'Desculpe, não entendi.';
