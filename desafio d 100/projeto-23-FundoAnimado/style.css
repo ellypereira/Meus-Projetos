@@ -8,7 +8,6 @@
 body {
     min-height: 100vh;
     background-color: var(--cor-roxo);
-    overflow: hidden;
 }
 
 :root {
@@ -22,35 +21,28 @@ body {
 .container {
     width: 100%;
     height: 100vh;
-    position: relative;
+    overflow: hidden;
+    display: flex;
 }
 
 .icone {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-image: url(icons8-pixel-star-16.png);
+    width: 80px;
+    height: 80px;
+    background-image: url(star-svgrepo-com\ \(1\).svg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    
-    left: calc(1% * var(--i)); /* Distribui horizontalmente */
-    bottom: -20px; /* Começa fora da tela */
-    
-    animation: linear infinite forwards;
-    animation-duration: calc(3s + var(--i) * 0.5s);
+    animation: anima linear infinite;
+    animation-duration: calc(300s / var(--i));
 }
 
-@keyframes icone {
+@keyframes anima {
     0% {
         transform: translateY(100vh) scale(0) rotate(0deg);
-        opacity: 0;
     }
-    50% {
-        opacity: 1;
-    }
+
     100% {
         transform: translateY(-10vh) scale(1) rotate(360deg);
-        opacity: 0;
+
     }
 }
