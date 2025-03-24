@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .cortador {
+    position: relative;
+    width: 240px;
+    height: 350px;
+    background-color: #f8f3f3;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+  
+  .lâmina {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 12px;
+    background: linear-gradient(to bottom, #666, #222);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+
+  
+  .papel {
+    position: absolute;
+    top: -250px;
+    left: 20px;
+    width: 200px;
+    height: 280px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1;
+  }
+  
+  @keyframes descer {
+    0% { top: -250px; }
+    100% { top: 110px; }
+  }
+  
+  @keyframes cortar {
+    0% { transform: translateY(-50px); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(-50px); }
+  }
+  
+  @keyframes explodir {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: translate(var(--x), var(--y)) scale(0.5); opacity: 0; }
+  }
+  
+  button#btnCortar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #353835;
+    color: white;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  button#btnCortar:hover {
+    background-color: #222;
+  }
+  
+  .particles {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 5;
+  }
+  
+  .particula {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #e20b0b;
+    border-radius: 50%;
+    animation: explodir 1s ease-out forwards;
+    opacity: 0.7;
+  }
+
+  .picado {
+    position: absolute;
+    top: 110px;
+    left: 20px;
+    width: 200px;
+    height: 280px;
+    z-index: 2;
+    display: none;
+  }
+  
+  .tira {
+    position: absolute;
+    width: 10px;
+    height: 280px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation: cair 1.5s ease-out forwards;
+  }
+  
+  @keyframes cair {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(200px) rotate(var(--rot)); opacity: 0.6; }
+  }
+  
+  
